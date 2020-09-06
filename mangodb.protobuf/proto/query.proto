@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package mangodb.protobuf;
+
+option csharp_namespace = "mangodb.protobuf";
+
+message query {
+    message select {
+        string table = 1;
+        map<string, field> fields = 2;
+        map<string, constraint> constraints = 3;
+    }
+    message field {}
+    message constraint {}
+}
